@@ -7,10 +7,13 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "@slack/bolt": "^3.5.0"
+    "@slack/bolt": "^3.5.0",
+    "@slack/web-api": "^6.3.0",
+    "node": "^16.6.1",
+    "serverless-offline": "^8.0.0"
   },
   "engines": {
-    "node": "11.x"
+    "node": "^16.6.1"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/bolt-app-template"
@@ -20,5 +23,8 @@
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "devDependencies": {
+    "serverless": "^2.55.0"
+  }
 }
