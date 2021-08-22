@@ -1,22 +1,18 @@
 Bolt app template
 =================
 
-[Bolt](https://slack.dev/bolt) is our framework that lets you build JavaScript-based Slack apps in a flash.
+[QuietPlease]() is a Slack app that allows you to anonymously ask other users to quiet down in your general channel
 
-This project is a simple app template to make it easy to create your first Bolt app. Read our [Getting Started with Bolt](https://api.slack.com/start/building/bolt) guide for a more in-depth tutorial
 
-Your Project
+ScreenShots
 ------------
 
-- `app.js` contains the primary Bolt app. It imports the Bolt package (`@slack/bolt`) and starts the Bolt app's server. It's where you'll add your app's listeners.
-- `.env` is where you'll put your Slack app's authorization token and signing secret.
-- The `examples/` folder contains a couple of other sample apps that you can peruse to your liking. They show off a few platform features that your app may want to use.
+* Start by typing in the slash command `/quietdown @user`
+![slashcommand](images/qd1.png)
 
+* You should then recieve some feedback that your command was successfully executed
+![slashcommandfeedback](images/qd2.png)
 
-Read the [Getting Started guide](https://api.slack.com/start/building/bolt)
--------------------
+* This is what the users of the workspace will see in the general channel
+![userview](images/qd3.png)
 
-Read the [Bolt documentation](https://slack.dev/bolt)
--------------------
-
-\ ゜o゜)ノ
