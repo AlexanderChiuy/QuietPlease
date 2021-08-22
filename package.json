@@ -1,7 +1,7 @@
 {
-  "name": "bolt-app-template",
+  "name": "QuietPlease",
   "version": "0.0.1",
-  "description": "A basic template to spin up a Bolt app for Slack",
+  "description": "This app is meant to anonymous and politely ask other users to quiet down (either in real life or in the slack workspace).",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -9,8 +9,7 @@
   "dependencies": {
     "@slack/bolt": "^3.5.0",
     "@slack/web-api": "^6.3.0",
-    "node": "^16.6.1",
-    "serverless-offline": "^8.0.0"
+    "node": "^16.6.1"
   },
   "engines": {
     "node": "^16.6.1"
@@ -25,6 +24,8 @@
     "express"
   ],
   "devDependencies": {
-    "serverless": "^2.55.0"
+    "serverless": "^2.55.0",
+    "serverless-dotenv-plugin": "^3.9.0",
+    "serverless-offline": "^8.0.0"
   }
 }
