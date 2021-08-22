@@ -125,10 +125,7 @@ app.event('app_home_opened', async ({ event, client, context }) => {
   }
 });
 
-module.exports.handler = (async (event, context, callback) => {
-  // Start your app
-  const handler = await app.start();
+module.exports.handler = async (event, context, callback) => {
+  const handler = await awsLambdaReceiver.start();
   return handler(event, context, callback);
-  
-  
-})();
+}

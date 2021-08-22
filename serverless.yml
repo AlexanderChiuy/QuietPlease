@@ -14,4 +14,5 @@ functions:
           path: slack/events
           method: post
 plugins:
+  - serverless-dotenv-plugin
   - serverless-offline
