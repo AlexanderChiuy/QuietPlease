@@ -1,5 +1,5 @@
 {
-  "name": "QuietPlease",
+  "name": "quiet_please",
   "version": "0.0.1",
   "description": "This app is meant to anonymous and politely ask other users to quiet down (either in real life or in the slack workspace).",
   "main": "app.js",
@@ -15,7 +15,7 @@
     "node": "^16.6.1"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/bolt-app-template"
+    "url": "https://github.com/AlexanderChiuy/QuietPlease.git"
   },
   "license": "MIT",
   "keywords": [
