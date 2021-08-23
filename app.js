@@ -125,6 +125,29 @@ app.event('app_home_opened', async ({ event, client, context }) => {
   }
 });
 
+app.get('/auth', (req, res) =>{
+	res.sendFile(__dirname + 'html/add_to_slack.html')
+});
+
+app.get('/auth/redirect', (req, res) =>{
+	var options = {
+  		uri: 'https://slack.com/api/oauth.access?code='
+  			+req.query.code+
+  			'&client_id='+process.env.CLIENT_ID+
+  			'&client_secret='+process.env.CLIENT_SECRET,
+		method: 'GET'
+  	}
+  	request(options, (error, response, body) => {
+  		var JSONresponse = JSON.parse(body)
+  		if (!JSONresponse.ok){
+  			console.log(JSONresponse)
+  			res.send("Error encountered: \n"+JSON.stringify(JSONresponse)).status(200).end()
+  		}else{
+  			res.send("Success!")
+  		}
+  	})
+})
+
 module.exports.handler = async (event, context, callback) => {
   const handler = await awsLambdaReceiver.start();
   return handler(event, context, callback);
