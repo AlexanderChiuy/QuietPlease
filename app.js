@@ -125,6 +125,7 @@ app.event('app_home_opened', async ({ event, client, context }) => {
   }
 });
 
+//set up custom lamda reciever to be exported to serverless
 module.exports.handler = async (event, context, callback) => {
   const handler = await awsLambdaReceiver.start();
   return handler(event, context, callback);
